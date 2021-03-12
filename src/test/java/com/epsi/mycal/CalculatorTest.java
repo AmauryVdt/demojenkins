@@ -6,15 +6,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/** Class to test the Calculator class.
- * 
- * @author amaur
- *
- */
 public class CalculatorTest {
 
   @Before
   public void setUp() throws Exception {
+
   }
 
   @After
@@ -23,67 +19,72 @@ public class CalculatorTest {
 
   @Test
   public void testAdd() {
-    int valueA = 2;
-    int valueB = 3;
+    int a = 2;
+    int b = 3;
 
     Calculator calc = new Calculator();
-    int actual = calc.add(valueA, valueB);
+    int actual = calc.add(a, b);
 
     assertEquals(5, actual);
   }
 
   @Test
   public void testSub() {
-    int valueA = 4;
-    int valueB = 2;
+    int a = 4;
+    int b = 2;
 
     Calculator calc = new Calculator();
-    int actual = calc.sub(valueA, valueB);
+    int actual = calc.sub(a, b);
 
     assertEquals(2, actual);
   }
 
   @Test
   public void testMul() {
-    int valueA = 4;
-    int valueB = 2;
+    int a = 4;
+    int b = 2;
 
     Calculator calc = new Calculator();
-    int actual = calc.mul(valueA, valueB);
+    int actual = calc.mul(a, b);
 
     assertEquals(8, actual);
   }
 
   @Test
   public void testDiv() {
-    int valueA = 4;
-    int valueB = 2;
+    int a = 4;
+    int b = 2;
 
     Calculator calc = new Calculator();
-    double actual = calc.div(valueA, valueB);
+    int actual = calc.div(a, b);
 
-    assertEquals(2, actual, 0.01);
+    assertEquals(2, actual);
   }
 
   @Test
-  public void testIsEven() {
-    int valueA = 4;
+  public void testIsPair() {
+    int a = 4;
+    int b = 3;
 
     Calculator calc = new Calculator();
-    boolean actual = calc.isEven(valueA);
+    boolean actual = calc.isPair(a);
+    assertTrue(actual);
 
-    assertEquals(true, actual);
-  }
-
-
-  @Test
-  public void testIsPremier() {
-    int valueA = 3;
-
-    Calculator calc = new Calculator();
-    boolean actual = calc.isPremier(valueA);
-
+    actual = calc.isPair(b);
     assertFalse(actual);
+  }
+
+  @Test
+  public void testIsPrime() {
+    int prime = 3;
+    int notPrime = 6;
+
+    Calculator calc = new Calculator();
+    boolean actual = calc.isPrime(prime);
+    assertTrue("is not prime", actual);
+
+    actual = calc.isPrime(notPrime);
+    assertFalse("is prime", actual);
   }
 
 }

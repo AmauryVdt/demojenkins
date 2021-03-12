@@ -1,17 +1,14 @@
 plugins {
-	id 'java'
-	id 'idea'
-	id 'eclipse'
-	id 'jacoco'
-	id 'checkstyle'
-	id "com.github.spotbugs" version "4.7.0"
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    id 'jacoco'
+    id 'checkstyle'
+    id "com.github.spotbugs" version "4.7.0"
 }
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
-    }
 }
 
 dependencies {
@@ -39,3 +36,23 @@ task checkstyleMain (type: Checkstyle, overwrite: true) {
     classpath = fileTree(classesJava)
     configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
 }
+
+task checkstyleTest (type: Checkstyle, overwrite: true) {
+    ignoreFailures = true
+    showViolations = false
+    source fileTree('src/test/java')
+    include '**/*.java'
+    exclude '**/gen/**'
+    classpath = fileTree(classesJava)
+    configFile = file("${rootProject.rootDir}/config/checkstyle/checkstyle.xml")
+}
+
+spotbugs {
+    ignoreFailures = true
+}
+
+test {
+    ignoreFailures = true
+
+}
+
