@@ -1,5 +1,6 @@
 package com.epsi.mycal;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Application {
@@ -13,7 +14,7 @@ public class Application {
     System.out.println("Hello World!");
     
     System.out.println("Bienvenue dans la calculatrice !");
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
     System.out.println("\n Please enter two numbers");
     System.out.println("\n First numbers : ");
