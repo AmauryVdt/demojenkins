@@ -1,6 +1,6 @@
 package com.epsi.mycal;
 
-/** Class to use different operation
+/** Class to use different operation.
  * 
  * @author amaur
  *
@@ -18,12 +18,18 @@ public class Calculator {
     return valueA * valueB;
   }
 
+  /** Division Function
+   * 
+   * @param valueA
+   * @param valueB
+   * @return
+   */
   public double div(int valueA, int valueB) {
     double result = 0;
     try {
-        result = (double)valueA / (double)valueB;
+      result = (double) valueA / (double) valueB;
     } catch (Exception e) {
-        System.out.println(e);
+      System.out.println(e);
     }
     return result;
   }
@@ -35,14 +41,14 @@ public class Calculator {
   public boolean isPremier(int valueA) {
     boolean isPremier = true;
     if (valueA < 0) {
-        isPremier = false;
+      isPremier = false;
     } else if (valueA != 0 && valueA != 1) {
-        for (int i = 2; i <= valueA/2; i++) {
-            if (valueA != i && valueA % i == 0) {
-                isPremier = false;
-                break;
-            }
+      for (int i = 2; i <= valueA / 2; i++) {
+        if (valueA != i && valueA % i == 0) {
+          isPremier = false;
+          break;
         }
+      }
     }
     return isPremier;
   }
