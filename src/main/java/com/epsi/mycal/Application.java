@@ -22,14 +22,14 @@ public class Application {
     int firstNumber = scanner.nextInt();
     System.out.print("\n Second number: ");
     int secondNumber = scanner.nextInt();
-    System.out.println("\n Select between (,/,+,-)\n");
+    System.out.println("\n Select between (*,/,+,-)\n");
     String operation = scanner.next();
 
     Calculator calculator = new Calculator();
     int result = 0;
 
     switch (operation) {
-    case "":
+    case "*":
       result = calculator.mul(firstNumber, secondNumber);
       break;
     case "/":

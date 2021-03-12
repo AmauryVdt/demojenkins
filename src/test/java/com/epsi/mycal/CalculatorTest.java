@@ -66,11 +66,11 @@ public class CalculatorTest {
   }
 
   @Test
-  public void testEven() {
+  public void testIsEven() {
     int valueA = 4;
 
     Calculator calc = new Calculator();
-    boolean actual = calc.even(valueA);
+    boolean actual = calc.isEven(valueA);
 
     assertEquals(true, actual);
   }
@@ -81,7 +81,7 @@ public class CalculatorTest {
     int valueA = 3;
 
     Calculator calc = new Calculator();
-    boolean actual = calc.even(valueA);
+    boolean actual = calc.isPremier(valueA);
 
     assertFalse(actual);
   }

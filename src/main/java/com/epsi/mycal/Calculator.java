@@ -34,10 +34,15 @@ public class Calculator {
     return result;
   }
 
-  public boolean even(int valueA) {
+  public boolean isEven(int valueA) {
     return valueA % 2 == 0;
   }
 
+  /** isPremier Function
+   * 
+   * @param valueA
+   * @return
+   */
   public boolean isPremier(int valueA) {
     boolean isPremier = true;
     if (valueA < 0) {
