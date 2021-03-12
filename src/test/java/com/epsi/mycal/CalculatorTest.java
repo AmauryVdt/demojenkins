@@ -49,4 +49,36 @@ public class CalculatorTest {
     assertEquals(8, actual);
   }
 
+  @Test
+  public void testDiv() {
+    int valueA = 4;
+    int valueB = 2;
+
+    Calculator calc = new Calculator();
+    double actual = calc.div(valueA, valueB);
+
+    assertEquals(2, actual, 0.001);
+  }
+
+  @Test
+  public void testEven() {
+    int valueA = 4;
+
+    Calculator calc = new Calculator();
+    boolean actual = calc.even(valueA);
+
+    assertEquals(true, actual);
+  }
+
+
+  @Test
+  public void testIsPremier() {
+    int valueA = 3;
+
+    Calculator calc = new Calculator();
+    boolean actual = calc.even(valueA);
+
+    assertFalse(actual);
+  }
+
 }

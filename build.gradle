@@ -4,11 +4,15 @@ plugins {
 	id 'eclipse'
 	id 'jacoco'
 	id 'checkstyle'
+	id "com.github.spotbugs" version "4.7.0"
 }
 
 repositories {
     mavenCentral()
+    maven {
+        url "https://plugins.gradle.org/m2/"
     }
+}
 
 dependencies {
     testCompile 'junit:junit:4.12'
