@@ -1,15 +1,16 @@
 package com.epsi.mycal;
 
 public class Calculator {
-	public int add(int a, int b) {
-		return a + b;
-	}
-	public int sub(int a, int b) {
-		return a - b;
-	}
-	
-	public int mul(int a, int b) {
-		return a * b;
-	}
+  public int add(int valueA, int valueB) {
+    return valueA + valueB;
+  }
+
+  public int sub(int valueA, int valueB) {
+    return valueA - valueB;
+  }
+
+  public int mul(int valueA, int valueB) {
+    return valueA * valueB;
+  }
 
 }
