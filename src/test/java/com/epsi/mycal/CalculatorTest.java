@@ -6,6 +6,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/** Class to test the Calculator class.
+ * 
+ * @author amaur
+ *
+ */
 public class CalculatorTest {
 
   @Before
@@ -55,9 +60,9 @@ public class CalculatorTest {
     int valueB = 2;
 
     Calculator calc = new Calculator();
-    int actual = calc.div(valueA, valueB);
+    double actual = calc.div(valueA, valueB);
 
-    assertEquals(2, actual);
+    assertEquals(2, actual, 0.01);
   }
 
   @Test

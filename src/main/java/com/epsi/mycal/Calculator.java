@@ -1,5 +1,10 @@
 package com.epsi.mycal;
 
+/** Class to use different operation
+ * 
+ * @author amaur
+ *
+ */
 public class Calculator {
   public int add(int valueA, int valueB) {
     return valueA + valueB;
@@ -13,8 +18,14 @@ public class Calculator {
     return valueA * valueB;
   }
 
-  public int div(int valueA, int valueB) {
-    return valueA / valueB;
+  public double div(int valueA, int valueB) {
+    double result = 0;
+    try {
+        result = (double)valueA / (double)valueB;
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+    return result;
   }
 
   public boolean even(int valueA) {
