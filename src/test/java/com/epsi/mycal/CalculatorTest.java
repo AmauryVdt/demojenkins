@@ -55,9 +55,9 @@ public class CalculatorTest {
     int valueB = 2;
 
     Calculator calc = new Calculator();
-    double actual = calc.div(valueA, valueB);
+    int actual = calc.div(valueA, valueB);
 
-    assertEquals(2, actual, 0.001);
+    assertEquals(2, actual);
   }
 
   @Test
